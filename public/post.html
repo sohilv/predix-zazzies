@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zazzies | GE</title>
+  <link rel="stylesheet" href="stylesheets/style.css"></link>
+  <link rel="icon" href="/images/ge_cloud_icon.ico"></link>
+  <link rel="import" href="/../bower_components/px-dropdown/px-dropdown.html"/>
+</head>
+<body>
+  <div class="header">
+    <h2>Zazzies™ powered by 
+    <a href="https://www.predix.io">
+      <img src="/images/predix_logo.png" alt="predix_logo">
+      </a>
+      </h2>
+    <h4>The premier cat-loving messaging service.</h4>
+    <ul class="topnav" id="myTopnav">
+      <li><a href="/index.html">Home</a></li>
+      <li><a class="active" href="/post.html">Post</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li class="icon">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="topnavCollapse()">☰</a>
+      </li>
+    </ul>
+  </div>
+<script>
+function topnavCollapse() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+
+<div class="container">
+    <p><br></p>
+    <div id="cat_picture"> 
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+    </div>
+    <p><br></p>
+
+
+    <div class="dropdown">
+    <button class="dropbtn">Pick a cat!</button>
+    <div class="dropdown-content">
+        <a href="" onclick="catSelect('Melon'); return false;">Melon Cat</a>
+        <a href="" onclick="catSelect('Orange'); return false;">Orange Cat</a>
+        <a href="" onclick="catSelect('Burger'); return false;">Burger Cat</a>
+        <a href="" onclick="catSelect('Ramen'); return false;">Ramen Cat</a>
+        <a href="" onclick="catSelect('Santa'); return false;">Santa Cat</a>
+        <a href="" onclick="catSelect('Flower'); return false;">Flower Cat</a>
+        <a href="" onclick="catSelect('Watermelon'); return false;">Watermelon Cat</a>
+    </div>
+    </div>
+<script>
+function catSelect(cat){
+   //alert("Cat selected: " + cat);
+   var innerPicture = "<img src='/images/predix_logo.png' alt='predix_logo'>";
+
+   switch(cat){
+       case "Melon":
+        innerPicture = "<img src='/images/melon_cat.gif' alt='cat_image'>";
+        break;
+       case "Orange":
+        innerPicture = "<img src='/images/orange_cats.gif' alt='cat_image'>";
+        break;
+       case "Burger":
+        innerPicture = "<img src='/images/burger_cats.gif' alt='cat_image'>";
+        break;
+       case "Ramen":
+        innerPicture = "<img src='/images/ramen_cats.gif' alt='cat_image'>";
+        break;
+       case "Santa":
+        innerPicture = "<img src='/images/santa_cat.gif' alt='cat_image'>";
+        break;
+       case "Flower":
+        innerPicture = "<img src='/images/flower_cat.gif' alt='cat_image'>";
+        break;
+       case "Watermelon":
+        innerPicture = "<img src='/images/watermelon_cats.gif' alt='cat_image'>";
+        break;
+        default:
+        innerPicture = "<img src='/images/melon_cat.gif' alt='cat_image'>";
+        break;       
+   }
+
+   document.getElementById("cat_picture").innerHTML = innerPicture;
+} 
+</script>
+
+
+
+
+
+</div>
+<div style="text-align:center; color=white">    
+    <p>©2016 General Electric</p>
+</div>
+  <div class="footer">
+  <div class="footer-logo-container">
+      <a href="http://www.ge.com/digital">
+      <img class="footer-logo" src="/images/monogram-wdmk.png">
+      </a>
+   </div>   
+  </div>
+
+</body>
+</html>

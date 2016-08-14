@@ -1,0 +1,239 @@
+body {
+  /*padding: 50px;*/
+  font: 14px Roboto,'GE Inspira',Helvetica,Arial,sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x:hidden;
+  background-image: url('/images/pusheen.png');
+  background-size: cover;
+  
+}
+
+.header img  {
+  /*float: right;*/
+  width: 230px;
+  height: 40px;
+}
+
+
+a {
+  color: #00B7FF;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+b1{
+  font-size: 30px;
+  font-weight: 5000;
+}
+
+b2{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+td {
+  vertical-align: top;
+  padding-right: 20px;
+}
+
+.header {
+  color: #ffffff;
+  background-image: url('/images/banner-dark.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  padding-bottom: 0px;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+  padding-top: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  min-height: 2000px;
+  background-color: white;
+}
+@media screen and (max-width:800px) {
+  .container {
+  text-align: center;
+  padding-top: 20px;
+  min-height: 2000px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: white;
+}
+}
+
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: -99;
+}
+
+.footer-logo-container {
+  position: relative;
+}
+
+.footer-logo {
+  height: 30px;
+  padding: 20px;
+  float: right;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.tag-multiple{
+  font-size:15px;
+  text-indent:-1.5px;
+  padding-left:2.5px;
+  height: 100%;
+  min-height: 200px;
+}
+
+.timeseries_button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor:pointer;
+    margin-top: 20px;
+}
+
+.start-time{
+  font-size:15px;
+  text-indent:-1.5px;
+  padding-left:2.5px;
+}
+
+.windyservice_chart_div{
+  display: inline-block;
+}
+
+.windyservice_chart_canvas{
+  height:500px;
+  width:400px;
+}
+
+.dropbtn {
+    background-color: #00a6d6;
+    color: white;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: center;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    text-align: left;
+    color: black;
+    padding: 20px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3a5dae;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*background-color: #333333;*/
+}
+
+ul.topnav li {
+  float: left;
+  }
+
+ul.topnav li a {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #9999a3;}
+
+ul.topnav .active{
+  background-color: #46ad00;
+}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    position: absolute;
+    right: 0px;
+    /*float: right;*/
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 20px;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
