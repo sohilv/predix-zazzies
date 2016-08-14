@@ -1,7 +1,7 @@
-Predix Development Kit Security Starter NodeJs Application
+Zazzies Application
 ==========================================================
 
-This is simple starter Node application that demonstrates user authentication with Predix UAA.
+This is a simple application that demonstrates *almost* nothing. 
 
 Refer to the predix-nodejs-starter to configure the UAA client.
 
