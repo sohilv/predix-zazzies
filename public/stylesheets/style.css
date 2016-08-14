@@ -140,10 +140,7 @@ li {
 .dropbtn {
     background-color: #00a6d6;
     color: white;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 20px;
     font-size: 40px;
     border: none;
     cursor: pointer;
@@ -236,4 +233,9 @@ ul.topnav li.icon {display: none;}
     text-align: left;
   }
 }
-
+ #messagetext
+    {
+     font-size:18pt;
+     height:50px;
+     width:300px;
+    }
