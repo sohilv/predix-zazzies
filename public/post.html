@@ -3,8 +3,8 @@
 <head>
   <title>Zazzies | GE</title>
   <link rel="stylesheet" href="stylesheets/style.css"></link>
-  <link rel="icon" href="/images/ge_cloud_icon.ico"></link>
-  <link rel="import" href="/../bower_components/px-dropdown/px-dropdown.html"/>
+  <link rel="icon" href="/images/zazzies_icon.ico"></link>
+
 </head>
 <body>
   <div class="header">
@@ -47,6 +47,8 @@ function topnavCollapse() {
         <p><br></p>
         <p><br></p>
     </div>
+    <div id="usernameArea">
+    </div>
     <div id="messageArea">
     </div>
     <p><br></p>
@@ -62,6 +64,8 @@ function topnavCollapse() {
         <a href="" onclick="catSelect('Santa'); return false;">Santa Cat</a>
         <a href="" onclick="catSelect('Flower'); return false;">Flower Cat</a>
         <a href="" onclick="catSelect('Watermelon'); return false;">Watermelon Cat</a>
+        <a href="" onclick="catSelect('Windmill'); return false;">Windmill Cat</a>
+
     </div>
     </div>
 <script>
@@ -90,34 +94,76 @@ function catSelect(cat){
        case "Watermelon":
         innerPicture = "<img src='/images/watermelon_cats.gif' id='selected_picture' alt='cat_07'>";
         break;
-        default:
+       case "Windmill":
+        innerPicture = "<img src='/images/windmill_cat.gif' id='selected_picture' alt='cat_07'>";
+        break;
+       default:
         innerPicture = "<img src='/images/melon_cat.gif' id='selected_picture' alt='cat_08'>";
         break;       
    }
+//    var form = "<form action='/makepost' method='post'>" + innerPicture + "<p><br></p><input type='text' id='usernametext' placeholder='Enter Your Name Here!'/> <p><br></p><input type='text' id='messagetext' placeholder='Enter Message Here!'/><input type='submit' value='Zazzle!'/></form>";
+//    document.getElementById("cat_picture").innerHTML = form;
+   var usernameBox = "<p><br></p><input type='text' id='usernametext' placeholder='Enter Your Name Here!'/>";
    var messageBox = "<p><br></p><input type='text' id='messagetext' placeholder='Enter Message Here!'/>";
-   var zazzle_btn = "<button class='dropbtn' onClick='submitPost()'>Zazzle!</button>";
+   var zazzle_btn = "<button class='dropbtn'>Zazzle!</button>";
    document.getElementById("zazzleButton").innerHTML = zazzle_btn;
    document.getElementById("cat_picture").innerHTML = innerPicture;
    document.getElementById("messageArea").innerHTML = messageBox; 
+   document.getElementById("usernameArea").innerHTML = usernameBox;
 } 
 
 function submitPost(){
     var cat_image = document.getElementById("cat_picture").innerHTML;
     var message_text = document.getElementById("messagetext").value;
     var alt_text = document.getElementById("selected_picture").alt;
-
+    //writeToFile("test");
     alert("Cat selected: " + cat_image + "\nMessage: " +  message_text + " " + message_text.length + "\nAlt text: " + alt_text);
 }
+
 </script>
 
 
 <p><br></p>
 <p><br></p>
 
+    <script src="/scripts/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#zazzleButton').click(function() {
+            // run an AJAX post request to the route you setup above...
+            // respect the cross-domain policy by using the same domain
+            // you used to access your index.html file!
+            try{
+                var cat_image = document.getElementById("cat_picture").innerHTML;
+                var message_text = document.getElementById("messagetext").value;
+                var username = document.getElementById("usernametext").value;
+                if (username.length > 0 && message_text.length > 0){
+                    // $.ajax({
+                    //     type: 'POST';
+                    //     url: '/makepost';
+                    //     data: {image: cat_image, message: message_text, user: username}
+                    //     async: false
+                    // })
+                    $.post('/makepost', {image: cat_image, message: message_text, user: username}, function() {
+                        //$('#response').html(list); // show the list
+                    });
+                    window.location = "\index.html";
+
+                }
+                else{
+                    alert("Please enter a name and a message!");
+                }
+            } catch(err){
+                alert(err);
+            }
+
+        });
+    });
+    </script>
 
 
 <div id="zazzleButton">
-    
+
 </div>
 
 

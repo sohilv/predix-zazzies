@@ -1,9 +1,8 @@
 var express = require('express');
 var path = require('path');
-
+var fs = require('fs');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var index = require('./routes/index');
 var secure = require('./routes/secure');
 var auth = require('./routes/auth.js');
@@ -40,6 +39,7 @@ var timeseriesURL = '';
 var uaaURL = '';
 var isConnectedTimeseriesEnabled = false;
 var isConnectedAssetEnabled = false;
+
 
 // checking NODE_ENV to load cloud properties from VCAPS
 // or development properties from config.json
@@ -176,6 +176,18 @@ app.use(auth.init(uaaConfig));
 app.get('/favicon.ico', function (req, res) {
   res.send('favicon.ico');
 });
+
+//Saves a post to the "database" (text file)
+app.post('/makepost', function(req, res){
+ var post = "<p>@" + req.body.user + "</p>\n" + req.body.image + "\n" + "<h1>" + req.body.message + "</h1>\n";
+ fs.appendFile(path.join(__dirname, 'public/data.txt'), "\n" + post, function(err) {
+     if(err) {
+         return console.log(err);
+     }
+     console.log("The file was saved!");
+ }); 
+});
+
 //Setting up the proxy for calling the windService microservice from the client
 //Since the headers needs to be modified with Authorization header
 //and content-type

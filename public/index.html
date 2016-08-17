@@ -32,72 +32,37 @@ function topnavCollapse() {
     } else {
         x.className = "topnav";
     }
-}
+}  
 </script>
 
-
-
-
-
   <div class="container">
-
-
   <h2>Welcome to Zazzies!</h2>
+    <div id="text-area">    
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p>Could not load posts.</p>
+        <p>Sad day :(</p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+    </div>
+    <!--<button class="dropbtn" onclick="viewFile()">View Posts</button>-->
+<script>
+  viewFile();
+  function readFile(file, out) {
+  var http = new XMLHttpRequest();
+  http.open('get', file);
+  http.onreadystatechange = function () {
+      out.innerHTML = http.responseText.replace(/\n/g, '<br>');
+  };
+  http.send();
+  }   
+  function viewFile(){
+        readFile('data.txt', document.getElementById('text-area'));
+  }
+</script>
 
-    
-<!--
-  COLOR: #333333
-     <img src="/images/cat_globe.jpg" alt="hello_world_cat">
-
-  
-        <b1><br></b1>
-    <b1>Hello, World! </b1>
-    <b1>Welcome to Zazzies!</b1>
-        <b1><br></b1>
-
-
-
-
-    <b1><br></b1>
-  <img src="/images/melon_cat.gif" alt="melon_cat">
-    <b1><br></b1>
-    <b1>Feeling... melancholy?</b1>
-   <b1><br></b1>
-   <b1>**MAKE A POST**</b1>
-   <b1><br></b1>
-
-
-<div class="dropdown">
-  <button class="dropbtn">Pick a Cat!</button>
-  <div class="dropdown-content">
-    <a href="#">No Cat</a>
-    <a href="#">Orange Hat Cats</a>
-    <a href="#">Ramen Hat Cats</a>
-    <a href="#">Burger Hat Cats</a>
-    <a href="#">Melon Hat Cat</a>
-    <a href="#">Flower Hat Cat</a>
-    <a href="#">Santa Hat Cat</a>
-  </div>
-</div>
-
-      
-  <input type="text" name="message" placeholder="Write Message Here!">
-
-
-    <b1><br></b1>
-
-
-
-   <button class="dropbtn">Zazzle!</button>
-    <b1><br></b1>
-    <b1><br></b1>
-    <b2>
-      Zazzies™ is an interactive cat-based website built to demonstrate the power of the Predix cloud platform.
-    </b2>
-    <b2><br></b2>
-    <b2>
-      No cats were harmed in the making of this website.     
-    </b2> -->
   </div>    
 <div style="text-align:center; color=white">    
     <p>©2016 General Electric</p>

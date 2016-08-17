@@ -1,0 +1,12 @@
+
+<p>@Daniel Officewala</p>
+<img src="/images/melon_cat.gif" id="selected_picture" alt="cat_01">
+<h1>Hello, World!</h1>
+
+<p>@Daniel Officewala</p>
+<img src="/images/windmill_cat.gif" id="selected_picture" alt="cat_07">
+<h1>Zazzies is an interactive message board...</h1>
+
+<p>@Daniel Officewala</p>
+<img src="/images/watermelon_cats.gif" id="selected_picture" alt="cat_07">
+<h1>...for those who love cats!</h1>

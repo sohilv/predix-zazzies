@@ -28,6 +28,9 @@ h2 {
   margin: 20px 0;
 }
 
+h3{
+  text-align: left;
+}
 h4 {
   font-weight: normal;
   font-size: 16px;
@@ -239,3 +242,9 @@ ul.topnav li.icon {display: none;}
      height:50px;
      width:300px;
     }
+#usernametext
+{
+    font-size:18pt;
+     height:50px;
+     width:300px;
+}
