@@ -34,10 +34,9 @@ function topnavCollapse() {
     }
 }  
 </script>
-
+    <div id="text-area">    
   <div class="container">
   <h2>Welcome to Zazzies!</h2>
-    <div id="text-area">    
         <p><br></p>
         <p><br></p>
         <p><br></p>
@@ -48,13 +47,15 @@ function topnavCollapse() {
         <p><br></p>
     </div>
     <!--<button class="dropbtn" onclick="viewFile()">View Posts</button>-->
+    </div>    
 <script>
   viewFile();
   function readFile(file, out) {
   var http = new XMLHttpRequest();
   http.open('get', file);
   http.onreadystatechange = function () {
-      out.innerHTML = http.responseText.replace(/\n/g, '<br>');
+      var header = "<div class='container'> \n <h2>Welcome to Zazzies!</h2>\n";
+      out.innerHTML = header + http.responseText.replace(/\n/g, '<br>');
   };
   http.send();
   }   
@@ -63,10 +64,10 @@ function topnavCollapse() {
   }
 </script>
 
-  </div>    
 <div style="text-align:center; color=white">    
     <p>©2016 General Electric</p>
 </div>
+
   <div class="footer">
   <div class="footer-logo-container">
       <a href="http://www.ge.com/digital">

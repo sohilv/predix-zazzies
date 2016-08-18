@@ -137,7 +137,8 @@ function submitPost(){
                 var cat_image = document.getElementById("cat_picture").innerHTML;
                 var message_text = document.getElementById("messagetext").value;
                 var username = document.getElementById("usernametext").value;
-                if (username.length > 0 && message_text.length > 0){
+                
+                if (username.length > 0 && message_text.length > 0 && !message_text.includes("<") && !message_text.includes(">") && !username.includes("<") && !username.includes(">")){
                     // $.ajax({
                     //     type: 'POST';
                     //     url: '/makepost';
@@ -151,7 +152,7 @@ function submitPost(){
 
                 }
                 else{
-                    alert("Please enter a name and a message!");
+                    alert("Please enter a valid name and a message!");
                 }
             } catch(err){
                 alert(err);

@@ -179,13 +179,48 @@ app.get('/favicon.ico', function (req, res) {
 
 //Saves a post to the "database" (text file)
 app.post('/makepost', function(req, res){
- var post = "<p>@" + req.body.user + "</p>\n" + req.body.image + "\n" + "<h1>" + req.body.message + "</h1>\n";
- fs.appendFile(path.join(__dirname, 'public/data.txt'), "\n" + post, function(err) {
-     if(err) {
-         return console.log(err);
-     }
-     console.log("The file was saved!");
- }); 
+ var currentdate = new Date();
+ var datetime = currentdate.getDate() + "."
+                + (currentdate.getMonth()+1)  + "." 
+                + currentdate.getFullYear() + " "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+ var post = "<p>@" + req.body.user + "\n" + datetime + "</p>\n" + req.body.image + "\n" + "<h1>" + req.body.message + "</h1>\n";
+ console.log("post acknowledged...");
+ var file = path.join(__dirname, 'public/data.txt');
+ var content;
+	fs.readFile(file, function read(err, data) {
+		if (err) {
+			throw err;
+		}
+		content = data;
+
+		// Invoke the next step here however you like
+		//console.log(content);   // Put all of the code here (not the best solution)
+		processFile();          // Or put the next step in a function and invoke it
+	});
+
+	function processFile() {
+		var new_content = post + content; 
+		fs.writeFile(file, new_content);
+		console.log("Post added!");
+	}
+
+ //var data = fs.readFileSync(file);
+ //var fd = fs.openSync(file, 'w+');
+ //var buffer = new Buffer(post);
+ //fs.writeSync(fd, buffer, 0, buffer.length);
+ //fs.writeSync(fd, data, buffer.length, data.length);
+ //console.log("Post added!");
+//  fs.appendFile(path.join(__dirname, 'public/data.txt'), "\n" + post, function(err) {
+//      if(err) {
+//          return console.log(err);
+//      }
+//      console.log("The file was saved!");
+//  }); 
+ 
 });
 
 //Setting up the proxy for calling the windService microservice from the client

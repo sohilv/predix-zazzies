@@ -1,12 +1,63 @@
+<p>@IAMNOTALECWU</p>
+<img src="/images/flower_cat.gif" id="selected_picture" alt="cat_06">
+<h1>Its not me I swear</h1>
 
-<p>@Daniel Officewala</p>
+<p>@samtown</p>
+<img src="/images/santa_cat.gif" id="selected_picture" alt="cat_05">
+<h1>@jwall</h1>
+
+<p>@what</p>
+<img src="/images/orange_cats.gif" id="selected_picture" alt="cat_02">
+<h1>what what</h1>
+
+<p>@jwal</p>
+<img src="/images/ramen_cats.gif" id="selected_picture" alt="cat_04">
+<h1>jwal loves predix </h1>
+
+<p>@Wooow</p>
+<img src="/images/ramen_cats.gif" id="selected_picture" alt="cat_04">
+<h1>much wow</h1>
+
+<p>@Matt </p>
+<img src="/images/windmill_cat.gif" id="selected_picture" alt="cat_07">
+<h1>Hello cat world</h1>
+
+<p>@test</p>
+<img src="/images/melon_cat.gif" id="selected_picture" alt="cat_01">
+<h1>test</h1>
+
+<p>@Steve</p>
+<img src="/images/windmill_cat.gif" id="selected_picture" alt="cat_07">
+<h1>Stan luvz catz.</h1>
+
+<p>@Stan</p>
+<img src="/images/windmill_cat.gif" id="selected_picture" alt="cat_07">
+<h1>I can haz windmillz</h1>
+
+<p>@John</p>
+<img src="/images/ramen_cats.gif" id="selected_picture" alt="cat_04">
+<h1>Zazzing from San Ramon!</h1>
+
+<p>@Xena Cat</p>
+<img src="/images/burger_cats.gif" id="selected_picture" alt="cat_03">
+<h1>Hey</h1>
+
+<p>@Windy</p>
+<img src="/images/windmill_cat.gif" id="selected_picture" alt="cat_07">
+<h1>My name's Windy and I like windmills!</h1>
+
+<p>@Ameya Shenoy</p>
+<img src="/images/santa_cat.gif" id="selected_picture" alt="cat_05">
+<h1>I just won the ping pong tournament!</h1>
+
+<p>@Daniel Officewala [sysadmin]</p>
 <img src="/images/melon_cat.gif" id="selected_picture" alt="cat_01">
 <h1>Hello, World!</h1>
 
-<p>@Daniel Officewala</p>
+<p>@Daniel Officewala [sysadmin]</p>
 <img src="/images/windmill_cat.gif" id="selected_picture" alt="cat_07">
 <h1>Zazzies is an interactive message board...</h1>
 
-<p>@Daniel Officewala</p>
+<p>@Daniel Officewala [sysadmin]</p>
 <img src="/images/watermelon_cats.gif" id="selected_picture" alt="cat_07">
 <h1>...for those who love cats!</h1>
