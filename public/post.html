@@ -138,7 +138,7 @@ function submitPost(){
                 var message_text = document.getElementById("messagetext").value;
                 var username = document.getElementById("usernametext").value;
                 
-                if (username.length > 0 && message_text.length > 0 && !message_text.includes("<") && !message_text.includes(">") && !username.includes("<") && !username.includes(">")){
+                if (username.length > 0 && message_text.length > 0 && !message_text.includes("<") && !message_text.includes(">") && !username.includes("<") && !username.includes(">") && !username.includes("@")){
                     // $.ajax({
                     //     type: 'POST';
                     //     url: '/makepost';
