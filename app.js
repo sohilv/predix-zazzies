@@ -19,7 +19,7 @@ var app = express();
 // Setting up express server port
 var config = {
 	express: {
-		port: process.env.VCAP_APP_PORT || 3000
+		port: process.env.PORT || 3000
 	}
 };
 
